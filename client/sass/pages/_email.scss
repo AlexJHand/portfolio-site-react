@@ -1,0 +1,99 @@
+.email {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(black, .8);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+
+    &__content {
+        @include absCenter;
+        width: 70%;
+        padding: 1.5rem;
+        background-color: rgba(white, 1);
+        box-shadow: 0 2rem 4rem rgba(black, .2);
+        border-radius: 3px;
+        overflow: hidden;
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(.5);
+        transition: all .4s .2s;
+    }
+
+    &__form {
+        width: 90%;
+        margin: auto;
+    }
+
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:target &__content {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    &__close {
+        &:link,
+        &:visited {
+            color: black;
+            position: absolute;
+            top: 2.5rem;
+            right: 2.5rem;
+            font-size: 4.5rem;
+            text-decoration: none;
+            display: inline-block;
+            line-height: 1;
+        }
+        &:hover {
+            color: gray;
+            cursor: pointer;
+        }
+    }
+
+    // &__button {
+
+    // }
+
+    &__success {
+        @include absCenter;
+        height: 15%;
+        width: 30%;
+        padding: 1.5rem;
+        background-color: rgba(white, 1);
+        box-shadow: 0 2rem 4rem rgba(black, .2);
+        border-radius: 3px;
+        overflow: hidden;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(.5);
+        transition: all .4s .2s;
+    }
+
+    &__success:target {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    &__success-text {
+        font-size: 1.8rem;
+        font-weight: 700;
+        transform: translate(28%, 20%);
+    }
+
+    &__success-button {
+        // position: fixed;
+        margin-top: 2rem;
+        left: 35%;
+        background-color: rgba(black, .8);
+        z-index: 9999;
+        // opacity: 0;
+        // visibility: hidden;
+        // transition: all .3s;
+    }
+}

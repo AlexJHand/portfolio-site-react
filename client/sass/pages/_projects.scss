@@ -1,0 +1,105 @@
+.projects {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+
+    &__item {
+        display: block;
+        margin: auto;  
+
+        // @include respond(tab-land) {
+        //     width: 80rem;
+        //     margin-left: 5rem;
+        //     // margin-right: 5rem;
+        // }
+    }
+
+    &__item-display {
+        height: 50rem;
+    }
+
+    &__radio-input {
+        display: none !important;
+    }
+
+    &__radio-input:checked + &__item-slide + &__item-group {
+        display: block;
+    }
+
+    &__radio-input:not(:checked) + &__item-group {
+        display: none;
+    }
+
+    &__item-group {
+        position: relative;
+    }
+
+    &__radio-label {
+        display: inline-block;
+        position: absolute;
+    }
+
+    &__item-left {
+        display: inline-block;
+        position: absolute;
+        text-align: center;
+        width: 4rem;
+        height: 4rem;
+        font-size: 3rem;
+        top: 25rem;
+        left: 0px;
+        z-index: 1000;
+        background-color: black;
+        opacity: .5;
+        &:hover {
+            cursor: pointer;
+            background-color: white;
+        }
+    }
+
+    &__item-right {
+        display: inline-block;
+        position: absolute;
+        text-align: center;
+        width: 4rem;
+        height: 4rem;
+        font-size: 3rem;
+        top: 25rem;
+        right: 0px;
+        z-index: 1000;
+        background-color: black;
+        opacity: .5;
+        &:hover {
+            cursor: pointer;
+            background-color: white;
+        }
+    }
+
+    &__item-left:hover > &__item-cursor {
+        color: black;
+    }
+
+    &__item-right:hover > &__item-cursor {
+        color: black;
+    }
+
+    &__item-cursor {
+        position: relative;
+        top: .4rem;
+        color: white;
+        background-color: transparent;   
+    }
+
+    &__item-slide {
+        width: 100%;
+        position: relative;
+
+        @include respond(tab-land) {
+            height: 100% !important;
+        }
+    }
+
+    &__links {
+        color: royalblue;
+    }
+}
+

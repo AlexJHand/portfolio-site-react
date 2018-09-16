@@ -1,0 +1,30 @@
+.about {
+    margin-top: 90px;
+
+    &__heading {
+        margin-bottom: 6rem;
+        @include respond(tab-land) {
+            display: block;
+            height: 12rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__text {
+        width: 60%;
+        margin-top: 4rem;
+        font-size: 2rem;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include respond(tab-land) {
+            transform: translate(-50%, 10%);
+        }
+        
+    }
+
+    &__item {
+        margin-top: 2rem;
+    }
+}

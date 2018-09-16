@@ -1,6 +1,7 @@
 {
   "name": "portfolio_site_react",
   "version": "0.1.0",
+  "proxy": "http://localhost:4500/",
   "private": true,
   "dependencies": {
     "history": "^4.7.2",

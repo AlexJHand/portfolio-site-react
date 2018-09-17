@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import './App.css';
 import Header from './layout/Header';
+import Home from './pages/Home';
 
 const Main = () => ( 
-  <main >
+  <BrowserRouter >
     <Switch >
-      {/* <Route exact path = '/' component = {MatchesCard}/> 
-      <Route path = '/table' component = {TableCard}/> 
+      <Route exact path = '/' component = {Home}/> 
+      {/* <Route path = '/table' component = {TableCard}/> 
       <Route path = '/stats' component = {StatsCard}/>  */}
     </Switch> 
-  </main>
+  </BrowserRouter>
 )
 
 class App extends Component {
@@ -19,7 +20,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        
+        <Main />
       </div>
     );
   }

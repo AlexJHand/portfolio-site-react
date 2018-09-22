@@ -1,4 +1,5 @@
 import React from 'react';
+import HomeIcon from '../components/HomeIcon';
 
 export default class Home extends React.Component {
     render() {
@@ -13,11 +14,16 @@ export default class Home extends React.Component {
                             <h3 className="heading-secondary">Software Developer</h3>
                             <div className="row">
                                 <ul className="user__links">
-                                    <li className="home__icon">
+                                    {/* <li className="home__icon">
                                         <a href="https://github.com/AlexJHand">
                                             <i className="fa fa-github fa-5x" aria-hidden="true"></i>
                                         </a>
-                                    </li>
+                                    </li> */}
+                                    <HomeIcon 
+                                        className="home__icon" 
+                                        href="https://github.com/AlexJHand"
+                                        iClassName="fa fa-github fa-5x"
+                                    />
                                     <li className="user__icon">
                                         <a href="https://www.linkedin.com/in/alexjhand/">
                                             <i className="fa fa-linkedin-square fa-5x" aria-hidden="true"></i>

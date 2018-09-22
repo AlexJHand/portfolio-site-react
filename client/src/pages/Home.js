@@ -20,7 +20,7 @@ export default class Home extends React.Component {
                                         </a>
                                     </li> */}
                                     <HomeIcon 
-                                        className="home__icon" 
+                                        className="user__icon" 
                                         href="https://github.com/AlexJHand"
                                         iClassName="fa fa-github fa-5x"
                                     />

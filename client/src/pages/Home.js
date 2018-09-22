@@ -14,31 +14,26 @@ export default class Home extends React.Component {
                             <h3 className="heading-secondary">Software Developer</h3>
                             <div className="row">
                                 <ul className="user__links">
-                                    {/* <li className="home__icon">
-                                        <a href="https://github.com/AlexJHand">
-                                            <i className="fa fa-github fa-5x" aria-hidden="true"></i>
-                                        </a>
-                                    </li> */}
                                     <HomeIcon 
                                         className="user__icon" 
                                         href="https://github.com/AlexJHand"
                                         iClassName="fa fa-github fa-5x"
                                     />
-                                    <li className="user__icon">
-                                        <a href="https://www.linkedin.com/in/alexjhand/">
-                                            <i className="fa fa-linkedin-square fa-5x" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
-                                    <li className="user__icon">
-                                        <a href="https://twitter.com/alexjhand">
-                                            <i className="fa fa-twitter-square fa-5x" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
-                                    <li className="user__icon">
-                                        <a href="#email">
-                                            <i className="fa fa-envelope fa-5x" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
+                                    <HomeIcon
+                                        className="user__icon"
+                                        href="https://www.linkedin.com/in/alexjhand/"
+                                        iClassName="fa fa-linkedin-square fa-5x"
+                                    />
+                                    <HomeIcon
+                                        className="user__icon"
+                                        href="https://twitter.com/alexjhand"
+                                        iClassName="fa fa-twitter-square fa-5x"
+                                    />
+                                    <HomeIcon
+                                        className="user__icon"
+                                        href="#email"
+                                        iClassName="fa fa-envelope fa-5x"
+                                    />
                                 </ul>
                             </div>
                         </div>

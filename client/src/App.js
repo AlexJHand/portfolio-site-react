@@ -4,13 +4,14 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Header from './layout/Header';
 import Home from './pages/Home';
+import Projects from './pages/Projects';
 
 const Main = () => ( 
   <BrowserRouter >
     <Switch >
       <Route exact path = '/' component = {Home}/> 
-      {/* <Route path = '/table' component = {TableCard}/> 
-      <Route path = '/stats' component = {StatsCard}/>  */}
+      <Route path='/projects' component={Projects}/> 
+      {/* <Route path = '/stats' component = {StatsCard}/>  */}
     </Switch> 
   </BrowserRouter>
 )

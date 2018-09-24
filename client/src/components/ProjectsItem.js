@@ -6,7 +6,7 @@ export default class ProjectsItem extends React.Component {
             <div className="projects__item">
                 <div className="card">
                     <div className="projects__item-display">
-                        <input type="radio" className="projects__radio-input" id="lfcOne" name="lfc" />
+                        <input checked type="radio" className="projects__radio-input" id="lfcOne" name="lfc" />
                         <div className="projects__item-group" id="lfcHome">
                             <img className="projects__item-slide" src={require ("../images/lfc_scheduler/home_Screenshot.png")} alt="LFC-Scheduler Home"/>
                             <label for="lfcThree" className="projects__radio-label projects__item-left">
@@ -18,7 +18,7 @@ export default class ProjectsItem extends React.Component {
                         </div>
                         <input type="radio" className="projects__radio-input" id="lfcTwo" name="lfc" />
                         <div className="projects__item-group" id="lfcTable">
-                            <img className="projects__item-slide" src="../src/images/lfc_scheduler/table_Screenshot.png" alt="Premier League Table"/>
+                            <img className="projects__item-slide" src={require ("../images/lfc_scheduler/table_Screenshot.png")} alt="Premier League Table"/>
                             <label for="lfcOne" className="projects__radio-label projects__item-left">
                                 <div className="projects__item-cursor">&#10094;</div>
                             </label>
@@ -27,15 +27,15 @@ export default class ProjectsItem extends React.Component {
                             </label>
                         </div>
                         <input type="radio" className="projects__radio-input" id="lfcThree" name="lfc" />
-                            <div className="projects__item-group" id="lfcGoals">
-                            <img className="projects__item-slide" src="../src/images/lfc_scheduler/goals_Screenshot.png" alt="Premier League Goal Leaders Table" />
-                                    <label for="lfcTwo" className="projects__radio-label projects__item-left">
-                                        <div className="projects__item-cursor">&#10094;</div>
-                                    </label>
-                                    <label for="lfcOne" className="projects__radio-label projects__item-right">
-                                        <div className="projects__item-cursor">&#10095;</div>
-                                    </label>
-                            </div>
+                        <div className="projects__item-group" id="lfcGoals">
+                            <img className="projects__item-slide" src={require ("../images/lfc_scheduler/goals_Screenshot.png")} alt="Premier League Goal Leaders Table" />
+                                <label for="lfcTwo" className="projects__radio-label projects__item-left">
+                                    <div className="projects__item-cursor">&#10094;</div>
+                                </label>
+                                <label for="lfcOne" className="projects__radio-label projects__item-right">
+                                    <div className="projects__item-cursor">&#10095;</div>
+                                </label>
+                        </div>
                     </div>
 
                     <div className="cardContainer">

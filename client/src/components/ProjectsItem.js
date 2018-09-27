@@ -51,14 +51,11 @@ export default class ProjectsItem extends React.Component {
                         <span> - </span>
                         <a className="projects__links" href={this.props.githubLink}>GitHub Link</a>
                         {hostedLink}
-                        <p>This application scrapes the web for Liverpool Football Club game times and then converts and displays those
-                            times in Eastern, Central, Mountain, and Pacific time zones, as well as various other data about the current Premier
-                            League season.
-                        </p>
+                        <p>{this.props.projectDescription}</p>
                         <h4>
                             <b>Technologies Used</b>
                         </h4>
-                        <p>React, Node, Express, Request, Cheerio, HTML5, and CSS3.</p>
+                        <p>{this.props.techUsed}</p>
                     </div>
                 </div>
             </div>

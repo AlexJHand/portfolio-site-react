@@ -7,7 +7,7 @@ export default class Home extends React.Component {
             <div className="user">
                 <div className="row">
                     <div className="col-1-of-2">
-                        <img src={require ("../images/Alex_Hand.jpg")} className="user__img" alt="Picture of Alex J Hand"/>
+                        <img src={require ("../images/Alex_Hand.jpg")} className="user__img" alt="Alex J Hand"/>
                     </div>
                     <div className="col-1-of-2">
                         <div className="user__text">

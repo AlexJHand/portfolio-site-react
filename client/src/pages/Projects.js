@@ -1,5 +1,9 @@
 import React from 'react';
-import LFCProjectsItem from '../components/LFCProjectsItem';
+import ProjectsItem from '../components/ProjectsItem';
+
+import home_Screenshot from '../images/lfc_scheduler/home_Screenshot.png';
+import table_Screenshot from '../images/lfc_scheduler/table_Screenshot.png';
+import goals_Screenshot from '../images/lfc_scheduler/goals_Screenshot.png';
 
 export default class Projects extends React.Component {
     constructor(props) {
@@ -7,9 +11,9 @@ export default class Projects extends React.Component {
 
         this.state = {
             lfcImages: [
-                "../images/lfc_scheduler/home_Screenshot.png",
-                "../images/lfc_scheduler/table_Screenshot.png",
-                "../images/lfc_scheduler/goals_Screenshot.png"
+                home_Screenshot,
+                table_Screenshot,
+                goals_Screenshot
             ]
         }
     }
@@ -17,7 +21,12 @@ export default class Projects extends React.Component {
     render() {
         return (
             <div className="projects">
-                <LFCProjectsItem imgArray={this.state.lfcImages}/>
+                <ProjectsItem 
+                    imgArray={this.state.lfcImages}
+                    projectName="LFC-Scheduler"   
+                    githubLink="https://github.com/AlexJHand/LFCSchedule"
+                    hostedLink="https://lfc-scheduler.herokuapp.com/" 
+                />
             </div>
         )
     }

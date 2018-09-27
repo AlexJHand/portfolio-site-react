@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import './App.css';
+import About from './pages/About';
 import Header from './layout/Header';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
@@ -11,7 +12,7 @@ const Main = () => (
     <Switch >
       <Route exact path = '/' component = {Home}/> 
       <Route path='/projects' component={Projects}/> 
-      {/* <Route path = '/stats' component = {StatsCard}/>  */}
+      <Route path='/about' component={About}/> 
     </Switch> 
   </BrowserRouter>
 )

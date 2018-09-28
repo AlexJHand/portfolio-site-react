@@ -50,18 +50,18 @@ router.post('/', (req, res) => {
     let mailConfig = new EmailConfig(siteCredentials.username, to, subject, message);
 
     // Send email
-    // transporter.sendMail(mailConfig, function (err, info) {
-    //     console.log('In sendMail', info);
-    //     console.log('Error', err);
-    //     // If error or success
-    //     if (err) {
-    //         console.log('sendMail error', err);
-    //         res.sendStatus(500);
-    //     } else {
-    //         console.log('Message sent', info.messageId, info.response);
-    //         res.sendStatus(201);
-    //     }
-    // })
+    transporter.sendMail(mailConfig, function (err, info) {
+        console.log('In sendMail', info);
+        console.log('Error', err);
+        // If error or success
+        if (err) {
+            console.log('sendMail error', err);
+            res.sendStatus(500);
+        } else {
+            console.log('Message sent', info.messageId, info.response);
+            res.sendStatus(201);
+        }
+    })
 });
 
 // Exports

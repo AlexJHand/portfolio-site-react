@@ -60,6 +60,20 @@
 
     // }
 
+    // &__success {
+    //     @include absCenter;
+    //     height: 15%;
+    //     width: 30%;
+    //     padding: 1.5rem;
+    //     background-color: rgba(white, 1);
+    //     box-shadow: 0 2rem 4rem rgba(black, .2);
+    //     border-radius: 3px;
+    //     overflow: hidden;
+    //     opacity: 0;
+    //     transform: translate(-50%, -50%) scale(.5);
+    //     transition: all .4s .2s;
+    // }
+
     &__success {
         @include absCenter;
         height: 15%;
@@ -69,8 +83,9 @@
         box-shadow: 0 2rem 4rem rgba(black, .2);
         border-radius: 3px;
         overflow: hidden;
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(.5);
+        // opacity: 0;
+        // transform: translate(-50%, -50%) scale(.5);
+        transform: translate(-50%, -50%) scale(1);
         transition: all .4s .2s;
     }
 

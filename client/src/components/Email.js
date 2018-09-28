@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 
+import EmailSuccess from './EmailSuccess';
+
 export default class Email extends React.Component {
     constructor(props) {
         super(props);
@@ -8,10 +10,13 @@ export default class Email extends React.Component {
         this.state ={
             email: "",
             subject: "",
-            message: ""
+            message: "",
+            showSuccessModal: false
         }
         this.handleFormSubmit = this.handleFormSubmit.bind(this);
         this.handleInputChange = this.handleInputChange.bind(this);
+        this.modalDisplay = this.modalDisplay.bind(this);
+        this.triggerModal = this.triggerModal.bind(this);
     }
 
     handleFormSubmit = event => {
@@ -26,8 +31,10 @@ export default class Email extends React.Component {
             }
             
             axios.post(`/mail`, messageObj)
-                .then(response => console.log("message sent"))
-                .catch(error => console.log(error))
+                // .then(response => console.log("message sent"))
+                .then(response => this.setState({ showSuccessModal: true }))
+                .then(response => this.modalDisplay)
+                // .catch(error => console.log(error))
         }
     }
 
@@ -36,6 +43,21 @@ export default class Email extends React.Component {
         this.setState({
             [name]: value
         });
+    }
+
+    modalDisplay = () => {
+        if (this.state.showSuccessModal) {
+            return (
+                <EmailSuccess />
+            )
+        } else {
+            return (<div></div>)
+        }
+    }
+
+    triggerModal = (response) => {
+        console.log("Server response", response);
+        this.setState({showSuccessModal: true});
     }
 
     render() {
@@ -106,10 +128,10 @@ export default class Email extends React.Component {
                         </form>
                     </div>
                 </div>
-                <div className="email__success" id="success">
-                    <div className="email__success-text">Your message was sent!</div>
-                    <a href="#" className="btn email__success-button">Close</a>
+                <div>
+                    {this.modalDisplay()}
                 </div>
+               
             </div>
 
                     

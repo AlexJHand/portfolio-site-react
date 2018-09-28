@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import './App.css';
 import About from './pages/About';
+import Email from './components/Email';
 import Header from './layout/Header';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
@@ -23,6 +24,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <Main />
+        <Email />
       </div>
     );
   }

@@ -16,7 +16,7 @@ export default class Email extends React.Component {
         this.handleFormSubmit = this.handleFormSubmit.bind(this);
         this.handleInputChange = this.handleInputChange.bind(this);
         this.modalDisplay = this.modalDisplay.bind(this);
-        this.triggerModal = this.triggerModal.bind(this);
+        // this.triggerModal = this.triggerModal.bind(this);
     }
 
     handleFormSubmit = event => {
@@ -32,8 +32,8 @@ export default class Email extends React.Component {
             
             axios.post(`/mail`, messageObj)
                 // .then(response => console.log("message sent"))
-                .then(response => this.setState({ showSuccessModal: true }))
-                .then(response => this.modalDisplay)
+                // .then(response => this.setState({ showSuccessModal: true }))
+                .then(response => this.modalDisplay())
                 // .catch(error => console.log(error))
         }
     }
@@ -46,21 +46,16 @@ export default class Email extends React.Component {
     }
 
     modalDisplay = () => {
-        if (this.state.showSuccessModal) {
-            return (
-                <EmailSuccess />
-            )
-        } else {
-            return (<div></div>)
-        }
+        this.setState({showSuccessModal: !this.state.showSuccessModal});
     }
 
-    triggerModal = (response) => {
-        console.log("Server response", response);
-        this.setState({showSuccessModal: true});
-    }
+    // triggerModal = (response) => {
+    //     console.log("Server response", response);
+    //     this.setState({showSuccessModal: true});
+    // }
 
     render() {
+        const {showSuccessModal} = this.state.showSuccessModal;
         return(
             <div className="email" id="email">
                 <div className="email__content">
@@ -129,7 +124,10 @@ export default class Email extends React.Component {
                     </div>
                 </div>
                 <div>
-                    {this.modalDisplay()}
+                    {/* {showSuccessModal && 
+                        <EmailSuccess />
+                    } */}
+                    {<EmailSuccess show={this.state.showSuccessModal} closeModal={this.modalDisplay}/>}
                 </div>
                
             </div>

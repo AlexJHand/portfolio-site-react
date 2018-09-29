@@ -268,7 +268,7 @@ h4 {
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.5);
     transition: all .4s .2s; }
-  .email__success:target {
+  .email__success-show {
     opacity: 1;
     visibility: visible;
     transform: translate(-50%, -50%) scale(1); }

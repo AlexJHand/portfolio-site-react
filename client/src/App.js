@@ -4,7 +4,6 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import About from './pages/About';
 import Email from './components/Email';
-import EmailSuccess from './components/EmailSuccess';
 import Header from './layout/Header';
 import Home from './pages/Home';
 import Projects from './pages/Projects';

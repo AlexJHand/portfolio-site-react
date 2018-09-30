@@ -254,10 +254,6 @@ h4 {
     color: gray;
     cursor: pointer; }
   .email__success {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     height: 15%;
     width: 30%;
     padding: 1.5rem;
@@ -266,12 +262,15 @@ h4 {
     border-radius: 3px;
     overflow: hidden;
     opacity: 0;
-    transform: translate(-50%, -50%) scale(0.5);
+    position: absolute;
+    top: 38%;
+    left: 35%;
+    transform: scale(0.5);
     transition: all .4s .2s; }
   .email__success-show {
     opacity: 1;
     visibility: visible;
-    transform: translate(-50%, -50%) scale(1); }
+    transform: scale(1); }
   .email__success-text {
     font-size: 1.8rem;
     font-weight: 700;

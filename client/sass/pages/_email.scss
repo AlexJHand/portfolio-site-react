@@ -75,7 +75,7 @@
     // }
 
     &__success {
-        @include absCenter;
+        // @include absCenter;
         height: 15%;
         width: 30%;
         padding: 1.5rem;
@@ -84,9 +84,14 @@
         border-radius: 3px;
         overflow: hidden;
         opacity: 0;
+        position: absolute;
+        top: 38%;
+        left: 35%;
         // opacity: 1;
         // visibility: visible;
-        transform: translate(-50%, -50%) scale(.5);
+        transform: scale(.5);
+        // transform: translate(-50%, -50%) scale(.5);
+        // transform: translate(-20%, -20%) scale(.5);
         // transform: translate(-50%, -50%) scale(1);
         transition: all .4s .2s;
     }
@@ -94,7 +99,9 @@
     &__success-show {
         opacity: 1;
         visibility: visible;
-        transform: translate(-50%, -50%) scale(1);
+        // transform: translate(-50%, -50%) scale(1);
+        // transform: translate(-35%, -35%) scale(1);
+        transform: scale(1);
     }
 
     // &__success:target {

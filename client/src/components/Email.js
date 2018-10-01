@@ -11,7 +11,8 @@ export default class Email extends React.Component {
             email: "",
             subject: "",
             message: "",
-            showSuccessModal: false
+            showSuccessModal: false,
+            modalMessage: ""
         }
         this.handleFormSubmit = this.handleFormSubmit.bind(this);
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -30,7 +31,8 @@ export default class Email extends React.Component {
             }
             
             axios.post(`/mail`, messageObj)
-                .then(response => this.modalDisplay())
+                .then(response => this.modalDisplay("Your message was sent!"))
+                .catch(error => this.modalDisplay("Something went wrong, please try again shortly."))
         }
     }
 
@@ -41,8 +43,11 @@ export default class Email extends React.Component {
         });
     }
 
-    modalDisplay = () => {
-        this.setState({showSuccessModal: !this.state.showSuccessModal});
+    modalDisplay = (message) => {
+        this.setState({
+            showSuccessModal: !this.state.showSuccessModal,
+            modalMessage: message
+        });
     }
 
     render() {
@@ -115,7 +120,11 @@ export default class Email extends React.Component {
                     </div>
                 </div>
                 <div>
-                    {<EmailSuccess show={this.state.showSuccessModal} closeModal={this.modalDisplay}/>}
+                    {<EmailSuccess 
+                        show={this.state.showSuccessModal} 
+                        closeModal={this.modalDisplay} 
+                        message={this.state.modalMessage}
+                    />}
                 </div>
                
             </div>

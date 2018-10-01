@@ -47,7 +47,7 @@ router.post('/', (req, res) => {
     let message = '<p>' + req.body.message + '</p>';
 
     // Create new EmailConfig
-    let mailConfig = new EmailConfig(siteCredentials.username, to, subject, message);
+    // let mailConfig = new EmailConfig(siteCredentials.username, to, subject, message);
 
     // Send email
     transporter.sendMail(mailConfig, function (err, info) {

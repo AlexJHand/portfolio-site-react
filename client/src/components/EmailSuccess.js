@@ -13,7 +13,8 @@ export default class EmailSuccess extends React.Component {
         if (this.props.show) {
             return (
                 <div className="email__success email__success-show" id="success">
-                    <div className="email__success-text">Your message was sent!</div>
+                    {/* <div className="email__success-text">Your message was sent!</div> */}
+                    <div className="email__success-text">{this.props.message}</div>
                     <a href="#" className="btn email__success-button" onClick={this.props.closeModal}>Close</a>
                 </div>
             )

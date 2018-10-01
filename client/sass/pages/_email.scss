@@ -56,26 +56,7 @@
         }
     }
 
-    // &__button {
-
-    // }
-
-    // &__success {
-    //     @include absCenter;
-    //     height: 15%;
-    //     width: 30%;
-    //     padding: 1.5rem;
-    //     background-color: rgba(white, 1);
-    //     box-shadow: 0 2rem 4rem rgba(black, .2);
-    //     border-radius: 3px;
-    //     overflow: hidden;
-    //     opacity: 0;
-    //     transform: translate(-50%, -50%) scale(.5);
-    //     transition: all .4s .2s;
-    // }
-
     &__success {
-        // @include absCenter;
         height: 15%;
         width: 30%;
         padding: 1.5rem;
@@ -87,28 +68,15 @@
         position: absolute;
         top: 38%;
         left: 35%;
-        // opacity: 1;
-        // visibility: visible;
         transform: scale(.5);
-        // transform: translate(-50%, -50%) scale(.5);
-        // transform: translate(-20%, -20%) scale(.5);
-        // transform: translate(-50%, -50%) scale(1);
         transition: all .4s .2s;
     }
 
     &__success-show {
         opacity: 1;
         visibility: visible;
-        // transform: translate(-50%, -50%) scale(1);
-        // transform: translate(-35%, -35%) scale(1);
         transform: scale(1);
     }
-
-    // &__success:target {
-    //     opacity: 1;
-    //     visibility: visible;
-    //     transform: translate(-50%, -50%) scale(1);
-    // }
 
     &__success-text {
         font-size: 1.8rem;
@@ -117,13 +85,9 @@
     }
 
     &__success-button {
-        // position: fixed;
         margin-top: 2rem;
         left: 35%;
         background-color: rgba(black, .8);
         z-index: 9999;
-        // opacity: 0;
-        // visibility: hidden;
-        // transition: all .3s;
     }
 }

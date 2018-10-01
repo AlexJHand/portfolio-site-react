@@ -16,7 +16,6 @@ export default class Email extends React.Component {
         this.handleFormSubmit = this.handleFormSubmit.bind(this);
         this.handleInputChange = this.handleInputChange.bind(this);
         this.modalDisplay = this.modalDisplay.bind(this);
-        // this.triggerModal = this.triggerModal.bind(this);
     }
 
     handleFormSubmit = event => {
@@ -31,10 +30,7 @@ export default class Email extends React.Component {
             }
             
             axios.post(`/mail`, messageObj)
-                // .then(response => console.log("message sent"))
-                // .then(response => this.setState({ showSuccessModal: true }))
                 .then(response => this.modalDisplay())
-                // .catch(error => console.log(error))
         }
     }
 
@@ -48,11 +44,6 @@ export default class Email extends React.Component {
     modalDisplay = () => {
         this.setState({showSuccessModal: !this.state.showSuccessModal});
     }
-
-    // triggerModal = (response) => {
-    //     console.log("Server response", response);
-    //     this.setState({showSuccessModal: true});
-    // }
 
     render() {
         const {showSuccessModal} = this.state.showSuccessModal;
@@ -124,9 +115,6 @@ export default class Email extends React.Component {
                     </div>
                 </div>
                 <div>
-                    {/* {showSuccessModal && 
-                        <EmailSuccess />
-                    } */}
                     {<EmailSuccess show={this.state.showSuccessModal} closeModal={this.modalDisplay}/>}
                 </div>
                

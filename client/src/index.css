@@ -256,7 +256,7 @@ h4 {
   .email__success {
     height: 15%;
     width: 30%;
-    padding: 1.5rem;
+    padding: 2.5rem;
     background-color: white;
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
     border-radius: 3px;
@@ -274,7 +274,9 @@ h4 {
   .email__success-text {
     font-size: 1.8rem;
     font-weight: 700;
-    transform: translate(28%, 20%); }
+    transform: translate(28%, 20%);
+    width: 60%;
+    margin-left: 10%; }
   .email__success-button {
     margin-top: 2rem;
     left: 35%;

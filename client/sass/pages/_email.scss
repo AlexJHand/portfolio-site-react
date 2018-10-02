@@ -59,7 +59,7 @@
     &__success {
         height: 15%;
         width: 30%;
-        padding: 1.5rem;
+        padding: 2.5rem;
         background-color: rgba(white, 1);
         box-shadow: 0 2rem 4rem rgba(black, .2);
         border-radius: 3px;
@@ -82,6 +82,8 @@
         font-size: 1.8rem;
         font-weight: 700;
         transform: translate(28%, 20%);
+        width: 60%;
+        margin-left: 10%;
     }
 
     &__success-button {

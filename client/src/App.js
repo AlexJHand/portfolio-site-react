@@ -25,7 +25,6 @@ class App extends Component {
         <Header />
         <Main />
         <Email />
-        {/* <EmailSuccess /> */}
       </div>
     );
   }

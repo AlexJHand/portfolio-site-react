@@ -23,8 +23,6 @@ class EmailConfig {
 
 // Class instance to send email from 
 const siteCredentials = new Credentials(process.env.emailName, process.env.emailPw);
-console.log('process.env.emailName', process.env.emailPw)
-console.log('process.env.emailName', process.env.emailPw)
 
 // Alex's email
 const alex = 'alex@alexjhand.com';

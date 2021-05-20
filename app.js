@@ -24,6 +24,8 @@ app.use('/', indexRouter);
 // Listener
 app.listen(port, function() {
     console.log('Listening on port ', port);
+    console.log('process.env.emailName', process.env.emailPw);
+    console.log('process.env.emailName', process.env.emailPw);
 });
 
 // Exports
